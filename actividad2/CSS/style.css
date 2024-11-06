@@ -1,0 +1,28 @@
+body{
+    background-color: rgb(205, 238, 238)
+}
+
+p{
+    color: rgb(30, 80, 128);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+
+}
+strong {
+    color: rgb(206, 195, 44);
+}
+ul{
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+ol{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+dt{
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
