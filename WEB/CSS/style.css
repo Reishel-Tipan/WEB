@@ -11,3 +11,39 @@ p{
 strong {
     color: rgb(206, 195, 44);
 }
+ul{
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+ol{
+    color: blue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+dt{
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+footer p{
+    color: green;
+    text-align: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 25px;
+}
+.destacado{
+    color: blue;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 30px;
+}
+#localizacion{
+    color: crimson;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+.container{
+    text-align:justify;
+    max-width: 1300px;
+    margin: 0 auto;
+}
