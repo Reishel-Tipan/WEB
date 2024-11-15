@@ -8,46 +8,42 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <center>
-                <h1>Sitios turísticos del Ecuador</h1>
-            </center>
-        </header>
-        <nav>
-            Home | <a href="../PORTAFOLIO/index.html">Portafolio</a> | <a href="../PAGINABLANCO/index.html">Página en Blanco</a>
-        </nav>
-        Buscar: <input type="text" id="buscar" name="buscar"> 
-                <button id="buscar">Buscar</button>
-
-        <section>
+    <header class="cabecera">
+      <h1>Sítios Turísticos</h1>
+      <p>Los mejores lugares de Quito</p>
+    </header>
+    <ul class="encabezado">
+      <li><a href="../PORTAFOLIO/index.html">Portafolio</a></li>
+      <li><a href="../PAGINABLANCO/index.html">Página en Blanco</a></li>
+    </ul>
+    <div class="contenedor">
+      <div class="contenedor-seccion">
+        <section class="seccion1">
             <p class="destacado">Panecillo</p>
             <p>El Panecillo es una elevación natural de <em> 3.000 metros sobre el nivel del mar</em>, 
             (200 metros más alto que el promedio de la ciudad de Quito) enclavada en el corazón mismo de 
             la de <strong> Quito (Ecuador)</strong>. Es el sitio más visitado de la ciudad. Por su ubicación 
-            se ha convertido en el más importante mirador natural de la ciudad, desde el que se puede apreciar 
+            se ha convertido en el más impo4rtante mirador natural de la ciudad, desde el que se puede apreciar 
             la disposición urbana de la <span class="clasespan">Capital ecuatoriana</span>, desde su centro histórico y hacia los extremos norte y sur.</p>
+            <h6>El gran monumento del panecillo</h6>
             <p>Localización geográfica:</p>
-            <ul id="localizacion">
+            <ol id="localizacion">
                 <li>Cordillera - Andes</li>
                 <li>Coordenadas	0°13′43″S 78°31′07″O</li>
                 <li>Altitud - 3000</li>
-            </ul>
+            </ol>
             <center>
                 <a href="https://es.wikipedia.org/wiki/El_Panecillo" target="_blank">
                     <figure>
                         <img src="./imagenes/panecillo.jpg" alt="Panecillo" width="500" height="300"">
                         <figcaption>Panecillo</figcaption>
                     </figure>                
-                </a>
-            </center>
-                    
+                </a>        
 
-            <button class="boton">Visitar Página</button>
-
+                <button class="boton">Visitar Página</button>
+        </center>
         </section>
-
-        <section>
+        <section class="seccion2">
             <p class="destacado">Mitad del Mundo</p>
             <p>La Ciudad Mitad del Mundo es un complejo turístico y cultural, propiedad de la prefectura 
                 de la provincia de Pichincha. Está situado en la parroquia de San Antonio del Distrito 
@@ -70,17 +66,39 @@
                         <figcaption>Mitad del Mundo</figcaption>
                     </figure>
                 </a>
-            </center>
-            <button class="boton">Visitar Página</button>
-
+            
+                <button class="boton">Visitar Página</button>
+        </center>
         </section>
-
-        <footer>
-            <p>Diseñado por Reishel Tipán</p>
-        </footer>
+        </div>
+        <aside class="info-lateral">
+            <p class="destacado">Datos Curiosos</p>
+            <p>¿Sabías que en el Panecillo hay una estatua gigante de la Virgen de Quito, la cual es una de las más altas del Ecuador?</p>
+            <p>En la Mitad del Mundo, puedes realizar experimentos físicos interesantes como observar cómo cambia la dirección del agua al cruzar la línea ecuatorial.</>
+    
+            <h1>Otros Lugares Recomendados</h1>
+            <ul id="lugares">
+                <li><a href="https://es.wikipedia.org/wiki/Telef%C3%A9rico_de_Quito" target="_blank">Teleférico de Quito</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Plaza_de_la_Independencia_(Quito)" target="_blank">Plaza de la Independencia</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/La_Ronda" target="_blank">La Ronda</a></li>
+                <li><a href="https://es.wikipedia.org/wiki/Iglesia_de_San_Francisco_(Quito)" target="_blank">Iglesia de San Francisco</a></li>
+            </ul>
+    
+            <h1>Consejos para Turistas</h1>
+            <p>Recuerda llevar ropa cómoda y bloqueador solar. Quito se encuentra a gran altitud, por lo que el clima puede variar rápidamente.</p>
+            <p>No olvides probar la gastronomía local, como los deliciosos "locros de papas" y los famosos "helados de paila".</p>
+            <center>
+                <img src="./imagenes/turistas.jpg" alt="Turistas" width="100" height="500"">              
+                </a>
+            </center>
+        </asid>
 
     </div>
+    <footer>
+        <p> Contáctanos: </p>
+        <p>099 5763 941 </p>
+        <p>099 9845 526 </p>
+        <p>Diseñado por: Reishel Tipán</p>
+    </footer>
+  </body>
 
-</body>
-
-</html>
