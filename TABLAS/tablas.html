@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla</title>
+    <link rel="stylesheet" href="./CSS/styleTable.css">
+</head>
+<body>
+    <header>Tablas</header>
+    <br>
+    <section>
+        <p>Uso de la etiqueta <em>table</em> para el <i>manejo</i> de envío o recibo de información</p>
+        <br>
+        <article>
+            <table frame="void" rules="cols" class="tableStyle" border="2px" cellpadding="10px" cellspacing="0px">   
+                <caption align="top">Listado de personas</caption>
+                <thead>
+                    <tr>
+                        <th align="center" width="300px">Nombres</th>
+                        <th align="center" width="300px">Apellidos</th>
+                        <th>Edad</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Reishel</td>
+                        <td>Tipan</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>Jairo</td>
+                        <td>Bonilla</td>
+                        <td>20</td>
+                    </tr>
+                    <tr>
+                        <td>Micaela</td>
+                        <td>Salcedo</td>
+                        <td>21</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td> pie</td>
+                        <td> pie</td>
+                        <td> pie</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <form action="submit" method="post">
+                <label Nombres:></label><input type="text" id="nombre" placeholder="nombres">
+                <br>
+                <label Apellidos:></label><input type="text" id="apellido" placeholder="nombres">
+                <br>
+                <label Password:></label><input type="password" id="txtPassword" placeholder="password">
+                <br>
+                <label for="Tipo de persona:"></label><select  id="cboTipo">
+                    <option>Profesores</option>
+                    <option>Estudiantes</option>
+                    <option>Administrativo</option>
+                </select>
+                <br>
+                <input type="submit">
+            </form>
+        </article>
+    </section>
+</body>
+
+</html>
