@@ -1,0 +1,121 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    background-color: #f3f3f3;
+}
+
+header.cabecera {
+    background-color: rgb(67, 143, 71);
+    color: white;
+    text-align: center;
+    padding: 16px 0;
+}
+
+.menu {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin-top: 16px; 
+}
+
+.menu li {
+    margin: 0 24px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+.contenedor-principal {
+    display: flex;
+}
+
+aside.categorias {
+    width: 20%;
+    background-color: rgb(54, 64, 69);
+    padding: 16px; 
+    color: white;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    column-gap: 0.5%;
+}
+
+aside.categorias h2 {
+    margin-bottom: 16px; 
+}
+
+section.productos {
+    width: 60%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+.producto {
+    background: white;
+    padding: 16px; 
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    text-align: center;
+    width: 50%;
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+.boton {
+    background-color: rgb(115, 212, 102);
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 16px;
+}
+
+.boton:hover {
+    background-color: rgb(47, 106, 53);
+}
+
+aside.chatbot {
+    width: 20%;
+    background-color: #ddd;
+    padding: 16px;
+    border-radius: 0px;
+}
+#mensaje{
+    background-color: rgb(175, 250, 207);
+}
+
+footer {
+    background-color: rgb(67, 143, 71);
+    color: white;
+    text-align: center;
+    padding: 16px 0; 
+}
+
+footer .redes {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+footer .redes li a {
+    color: white;
+    text-decoration: none;
+}
+.btn-style{
+    background-color: rgb(115, 212, 102);
+    text-decoration: none;
+    padding: 0.7rem;
+    border-radius: 10px;
+}

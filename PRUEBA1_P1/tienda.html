@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="/PRUEBA1_P1/CSS/styleTienda.css">
+</head>
+<body>
+    <header class="cabecera">
+        <h1>Tienda Virtual</h1>
+        <nav>
+            <ul class="menu">
+                <li><a href="/PRUEBA1_P1/ropa.html">Ropa</a></li>
+                <li><a href="/PRUEBA1_P1/tecnología.html">Tecnología</a></li>
+                <li><a href="/PRUEBA1_P1/zapatos.html">Zapatos</a></li>
+                <li><a href="#contactos">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="contenedor-principal">
+        <aside class="categorias">
+            <h2>Categorías</h2>
+            <a href="#ropa" class="btn-style">Ropa</a>
+            <a href="#tecnologia" class="btn-style">Tecnología</a>
+            <a href="#zapatos" class="btn-style">Zapatos</a>
+            <a href="#contactos" class="btn-style">Contactos</a>
+        </aside>
+        <section class="productos">
+            <div id="ropa" class="producto">
+                <h3>Ropa</h3>
+                <img src="./imagenes/pantalon.jpg" alt="Pantalón elegante" width="250" height="250">
+                <h4>Pantalón Elegante</h4>
+                <p>Precio: $30</p>
+                <button class="boton">Comprar</button>
+            </div>
+            <div id="tecnologia" class="producto">
+                <h3>Tecnología</h3>
+                <img src="./imagenes/celular.jpg" alt="Teléfono inteligente" width="300" height="300">
+                <h4>Teléfono Inteligente</h4>
+                <p>Precio: $400</p>
+                <button class="boton">Comprar</button>
+            </div>
+            <div id="zapatos" class="producto">
+                <h3>Zapatos</h3>
+                <img src="./imagenes/zaptos.jpg" alt="Zapatos" width="300" height="300">
+                <h4>Zapatos</h4>
+                <p>Precio: $38</p>
+                <button class="boton">Comprar</button>
+            </div>
+        </section>
+        <aside class="chatbot">
+            <h2>Servicio al Cliente</h2>
+            <center>
+            <img src="./imagenes/chatbot.jpg" alt="Chatbot" width="100" height="100">
+            </center>
+            <input id="mensaje" placeholder="Escribe tu mensaje"></input>
+            <br>
+            <button class="boton">Enviar</button>
+        </aside>
+    </main>
+    <footer id="contactos">
+        <h3>Sobre Nosotros</h3>
+        <p>Somos una tienda virual dedicada a ofrecer los mejores productos de tecnología, ropa y zapatos.</p>
+        <p> <strong>Síguenos</strong></p>
+        <ul class="redes">
+            <li><a href="https://www.facebook.com/reishel.tipan?locale=es_LA"><img src="./imagenes/facebook.jpg" alt="Facebook" width="25" height="25"> Facebook</a></li>
+            <li><img src="./imagenes/instagram.jpg" alt="Instagram" width="25" height="25"> Instagram</a></li>
+            <li><img src="./imagenes/whatsap.jpg" alt="WhatsApp" width="25" height="25"> WhatsApp</a></li>
+        </ul>
+        <br>
+        <a href="./inventario.html" class="btn-style">Ver Tablas de Inventario</a>
+        <p>© 2024 Tienda Virtual. Todos los derechos reservados. Reishel Tipán</p>
+    </footer>
+</body>
+</html>
+
