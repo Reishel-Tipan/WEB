@@ -1,0 +1,14 @@
+#noticias{
+    width: 500px;
+    padding: 10px;
+    border: 2px solid rgb(180, 141, 225);
+
+    column-count: 4;
+    column-gap: 20px;
+
+    column-rule-style: dotted;
+    column-rule-color:tomato;
+    column-rule-width: 7px;
+    
+    column-rule: 1px solid rgb(49, 141, 98);
+}

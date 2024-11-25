@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100%;
+    background-color: #b7e4ef;
+}
+.card{
+    box-shadow: #1d889b 0px 0px 50px;
+    margin: auto;
+    margin-top: 40px;
+    height: 625px;
+    background-color: rgb(255, 255, 255);
+    width: 500px;
+    border: blue solid;
+}
+.card-header{
+    height: 350px;
+    background-image: url(../imagenes/shirt.jpg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-style:solid;
+    border-color: yellowgreen;
+}
+h4{
+    color: #a9a9a9;   
+}
+.card-content{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    border: red 5px solid;
+
+}
+.size{
+    margin-top: 40px;
+}
+.colors{
+    margin-top: 40px;
+}
+.rojo{
+    border-radius: 50%;       
+    width: 20px;             
+    height: 20px;                   
+    display: inline-block;   
+    border: 2px solid #000;
+    background-color: red;
+    color: red;
+}
+.azul{
+    border-radius: 50%;       
+    width: 20px;             
+    height: 20px;               
+    display: inline-block;    
+    border: 2px solid #000;
+    background-color: blue;
+    color: blue;
+}
+.blanco{
+    border-radius: 50%;   
+    width: 20px;         
+    height: 20px;                 
+    display: inline-block;    
+    border: 2px solid #000;
+    background-color: white;
+    color: white;
+}
+.verde{
+    border-radius: 50%;       
+    width: 20px;              
+    height: 20px;                  
+    display: inline-block;    
+    border: 2px solid #000;
+    background-color: greenyellow;
+    color: greenyellow;
+}
+.card-body{
+    border-style: solid;
+    border-color: red;
+    padding: 20px;
+}
+.card-content h2{
+    border-bottom: red 5px solid;
+    display: flex;
+    justify-content: space-between;
+}
+.card-content p{
+    color: rgb(42, 141, 195);
+}
+
+
+.card-content h2:hover {
+    color: white;
+    background-color: black;
+    transition: 0.3s; 
+}
+
+.card-content h2:hover .card-header {
+    transform: scaleX(-1);
+    transition: 0.3s;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

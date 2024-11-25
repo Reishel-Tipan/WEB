@@ -51,7 +51,7 @@ aside.categorias h2 {
 section.productos {
     width: 60%;
     display: flex;
-    flex-wrap: wrap;
+ 
     gap: 10px;
     justify-content: center;
 }
@@ -106,7 +106,6 @@ footer .redes {
     padding: 0;
     display: flex;
     justify-content: center;
-    gap: 24px;
 }
 
 footer .redes li a {
