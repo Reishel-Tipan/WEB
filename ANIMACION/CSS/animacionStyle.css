@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+}
+body{
+    height: 100%;
+    background-color: rgb(245, 236, 220);
+}
+/*los keyframes en CSS se utlizan para anima propiedades CSS.
+se utiliza para definir animaciones, permitie crear una 
+secuencia de fotogramas claves (@keyframes)*/
+
+@keyframes cambiarColores {
+    0% {
+        background-color: rgb(0, 78, 222);
+    }
+    25% {
+        background-color: rgb(25, 234, 178);
+        transform: scale(0.5);
+    }
+    50% {
+        background-color: rgb(255, 58, 242);
+        transform: scale(1.1);
+    }
+    75% {
+        background-color: rgb(229, 255, 29);
+        transform: scale(0.5);
+    }
+    100% {
+        background-color: rgb(255, 17, 0);
+    }
+}
+.circulo{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+
+    animation-name: cambiarColores;
+    animation-duration: 7s;
+    animation-iteration-count: infinite;
+
+    /*animation-timing-function:cubic-bezier(0.075, 0.82, 0.165, 1)*/
+    /*utiliza una curva personalizada que simula un rebote
+    /*animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);*/
+    animation-timing-function: ease-in-out;
+    /*animation-timing-function: step-start;*/
+    /*animation-timing-function: steps(5,end);*/
+    /*animation-timing-function: step-end;*/
+}
+@keyframes volar {
+    0% {}
+
+    20% {
+        transform: translate(200px, 0px);
+    }
+    
+    30% {
+        transform: translate(200px, 0px) rotate(90deg);
+    }
+
+    40% {
+        transform: translate(200px, 200px) rotate(90deg);
+    }
+
+    50% {
+        transform: translate(200px, 200px) rotate(180deg);
+    }
+
+    100% {}
+}
+.avion {
+    animation-name: volar, cambiarColores ;
+    animation-duration: 10s;
+}

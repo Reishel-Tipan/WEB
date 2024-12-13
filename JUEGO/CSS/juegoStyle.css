@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: #ddd;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+}
+.container {
+    background-color: black;
+    height: 100vh;
+    width: 100vw;
+    position: fixed;
+}
+.pelota {
+    background-color: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+
+    animation-name: trayectoria;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+.barra {
+    background-color: #14801d;
+    width: 150px;
+    height: 50px;
+
+    animation-name: barra;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes trayectoria {
+    0% {
+        transform: translate(0vw, 0vh); 
+    }
+    25% {
+        transform: translate(50vw, 95vh); 
+    }
+    50% {
+        transform: translate(100vw, 0vh); 
+    }
+
+    75% {
+        transform: translate(50vw, 95vh); 
+    }
+
+    100% {
+        transform: translate(0vw, 0vh); 
+    }
+}
+
+@keyframes barra {
+    0% {
+        transform: translate(0vw, 95vh); 
+    }
+
+    25% {
+        transform: translate(50vw, 95vh); 
+    }
+
+    50% {
+        transform: translate(100vw, 95vh); 
+    }
+
+    75% {
+        transform: translate(50vw, 95vh); 
+    }
+
+    100% {
+        transform: translate(0vw, 95vh); 
+    }
+}
+
+
+
+
+
+
+
+
+
+
