@@ -36,7 +36,7 @@ const esPar = (numero) => {
         console.log("Promedio: " + resultadoPromedio);
 
         const mayor = determinarMayor(valor1, valor2);
-        console.log(`El mayor entre ${valor1} y ${valor2} es:`, mayor);
+        console.log('El mayor es:', mayor);
 
         const par = esPar(numeroPar);
         console.log('El número es par? ', par);
