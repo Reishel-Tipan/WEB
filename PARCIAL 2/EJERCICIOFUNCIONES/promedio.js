@@ -1,20 +1,20 @@
 function calcularPromedio(a, b, c) {
     if (typeof a !== 'number' || typeof b !== 'number' || typeof c !== 'number') {
-        throw new Error("Todos los parámetros deben ser números en calcularPromedio.");
+        throw new Error("Los parámetros deben ser números!");
     }
     return (a + b + c) / 3;
 }
 
 const determinarMayor = function (a, b) {
     if (typeof a !== 'number' || typeof b !== 'number') {
-        throw new Error("Todos los parámetros deben ser números en determinarMayor.");
+        throw new Error("Los parámetros deben ser números!.");
     }
     return a > b ? a : b;
 };
 
 const esPar = (numero) => {
     if (typeof numero !== 'number') {
-        throw new Error("El parámetro debe ser un número en esPar.");
+        throw new Error("El parámetro debe ser números!");
     }
     return numero % 2 === 0;
 };
@@ -25,8 +25,8 @@ const esPar = (numero) => {
         const numero2 = 15;
         const numero3 = 20;
 
-        const valor1 = 45;
-        const valor2 = 32;
+        const valor1 = 83;
+        const valor2 = 31;
 
         const numeroPar = 42;
 
