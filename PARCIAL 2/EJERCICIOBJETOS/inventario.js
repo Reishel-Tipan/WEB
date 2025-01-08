@@ -1,4 +1,3 @@
-// Creación del inventario inicial
 const inventarioProductos = {
     producto1: { nombre: 'disco de freno', precio: 20, cantidad: 50 },
     producto2: { nombre: 'embrague', precio: 40, cantidad: 30 },
@@ -13,7 +12,7 @@ function venderProducto(nombreProducto, cantidad) {
         if (inventarioProductos[clave].nombre === nombreProducto) {
             if (inventarioProductos[clave].cantidad >= cantidad) {
                 inventarioProductos[clave].cantidad -= cantidad;
-                console.log(`Venta confirmada de ${cantidad} unidades de ${nombreProducto}.`);
+                console.log(`Venta confirmada de ${cantidad} productos de ${nombreProducto}.`);
                 return;
             } else {
                 console.log(`ERROR!! No hay suficiente stock de ${nombreProducto}.`);
@@ -21,23 +20,24 @@ function venderProducto(nombreProducto, cantidad) {
             }
         }
     }
-    console.log(`ERROR!! El producto ${nombreProducto} no existe en el inventario`);
+    console.log(`ERROR!! El producto ${nombreProducto} no existe en la tienda`);
 }
 
 function aplicarDescuento(porcentaje) {
-    const descuento = porcentaje / 100;
     for (let clave in inventarioProductos) {
-        let nuevoPrecio = inventarioProductos[clave].precio * (1 - descuento);
-        inventarioProductos[clave].precio = Math.max(0, nuevoPrecio); 
+        let descuento = (inventarioProductos[clave].precio * porcentaje) / 100;
+        inventarioProductos[clave].precio -= descuento;
     }
     console.log(`Se aplicó un descuento del ${porcentaje}% a todos los productos`);
 }
+
 
 //venta
 venderProducto('disco de freno', 5);
 venderProducto('bateria', 25);
 venderProducto('neumaticos', 2); 
 
+//descuento a los productos
 aplicarDescuento(10);
 
 //inventario final
