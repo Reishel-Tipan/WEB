@@ -41,4 +41,4 @@ venderProducto('neumaticos', 2);
 aplicarDescuento(10);
 
 //inventario final
-console.log('Inventario final:', inventarioProductos);
+console.log(inventarioProductos);
