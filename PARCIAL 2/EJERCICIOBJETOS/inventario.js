@@ -12,10 +12,10 @@ function venderProducto(nombreProducto, cantidad) {
         if (inventarioProductos[clave].nombre === nombreProducto) {
             if (inventarioProductos[clave].cantidad >= cantidad) {
                 inventarioProductos[clave].cantidad -= cantidad;
-                console.log(`Venta confirmada de ${cantidad} productos de ${nombreProducto}.`);
+                console.log(`Venta confirmada de ${cantidad} productos de ${nombreProducto}`);
                 return;
             } else {
-                console.log(`ERROR!! No hay suficiente stock de ${nombreProducto}.`);
+                console.log(`ERROR!! No hay suficiente stock de ${nombreProducto}`);
                 return;
             }
         }
