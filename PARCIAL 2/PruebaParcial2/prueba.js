@@ -1,93 +1,113 @@
-//Inventario de una libreria
-const inventarioProductos = {
-    producto1: { nombre: 'Libro Romeo y Julieta', precio: 20, cantidad: 50, categoria: 'romance' },
-    producto2: { nombre: 'Libro Ush ush', precio: 22, cantidad: 30, categoria: 'romance'},
-    producto3: { nombre: 'Libro Pecados capitales', precio: 24, cantidad: 20, categoria: 'drama' },
-    producto4: { nombre: 'Libro It', precio: 15, cantidad: 40, categoria: 'miedo'},
-};
-
-class inventario{
-    constructor(nombre,precio,cantidad, categoria){
-        this.nombre=nombre;
-        this.precio=precio;
-        this.cantidad=cantidad;
-        this.categoria=categoria;
+class Producto {
+    constructor(nombre, precio, cantidad, categoria) {
+        this.nombre = nombre;
+        this.precio = precio;
+        this.cantidad = cantidad;
+        this.categoria = categoria;
     }
 }
 
-function agregarProductos(nombre,precio,cantidad, categoria){
-    add.nombre='';
-    add.precio='';
-    add.cantidad='';
-    add.categoria='';
-}
-
-function listarProductosAscendente(precio){
-    for(let clave in inventarioProductos){
-        if(inventarioProductos[clave].precio>=precio){
-            return precio; 
-        }
-        else if(inventarioProductos){
-            inventarioProductos[clave].precio<=precio;
-            return precio;
-        }
-        else{
-            return precio;
-        }
-    }
-}
-
-function busquedaCategoria(categoria){
-    for(let clave in inventarioProductos){
-        if(inventarioProductos === categoria){
-            console.log('/****Categoria encontrada****/');
-
-        }
+class Inventario {
+    constructor() {
+        this.productos = [];
     }
 
-}
-
-class Venta{
-    realizarVenta(nombreProducto,cantidad){
-
+    agregarProducto(nombre, precio, cantidad, categoria) {
+        this.productos.push(new Producto(nombre, precio, cantidad, categoria));
+        console.log(`Producto ${nombre} agregado al inventario.`);
     }
-}
 
-function realizarVenta(nombreProducto, cantidad) {
-    for (let clave in inventarioProductos) {
-        if (inventarioProductos[clave].nombre === nombreProducto) {
-            if (inventarioProductos[clave].cantidad >= cantidad) {
-                inventarioProductos[clave].cantidad -= cantidad;
-                console.log(`Venta confirmada de ${cantidad} ${nombreProducto}`);
-                return;
-            } else {
-                console.log(`ERROR!! Cantidad insuficiente de ${nombreProducto}`);
-                return;
+    listarProductos() {
+        return this.productos.sort((a, b) => a.precio - b.precio);
+    }    
+
+    filtrarPorCategoria(categoria) {
+        const productosFiltrados = this.productos.filter(p => p.categoria === categoria);
+        console.log(`Productos en la categoría "${categoria}":`);
+        productosFiltrados.forEach(p => console.log(p));
+    }
+
+    aplicarDescuento(categoria, porcentaje) {
+        for (const indice in this.productos) {
+            const producto = this.productos[indice];
+            if (producto.categoria === categoria) {
+                const descuento = (producto.precio * porcentaje) / 100;
+                producto.precio -= descuento;
             }
         }
-    }
-    console.log(`ERROR!! El producto ${nombreProducto} no existe en la tienda`);
+        console.log(`Se aplicó un descuento del ${porcentaje}% a los productos de la categoría "${categoria}".`);
+    }    
 }
 
-function aplicarDescuento(categoria, porcentaje) {
-    for (let clave in inventarioProductos) {
-        let descuento = (inventarioProductos[clave].precio * porcentaje) / 100;
-        inventarioProductos[clave].precio -= descuento;
+class Venta {
+    constructor() {
+        this.ventas = [];
+        this.ingresosTotales = 0;
+        this.productosVendidos = {};
     }
-    console.log(`Se aplicó un descuento del ${porcentaje}% a todos los productos`);
+
+    realizarVenta(nombreProducto, cantidad, inventario) {
+        const producto = inventario.productos.find(p => p.nombre === nombreProducto);
+
+        if (!producto) {
+            console.log(`ERROR!! El producto "${nombreProducto}" no existe en el inventario.`);
+            return;
+        }
+
+        if (producto.cantidad < cantidad) {
+            console.log(`ERROR!! Cantidad insuficiente de "${nombreProducto}".`);
+            return;
+        }
+
+        producto.cantidad -= cantidad;
+        const totalVenta = producto.precio * cantidad;
+        this.ventas.push({ nombreProducto, cantidad, totalVenta, fecha: new Date() });
+        this.ingresosTotales += totalVenta;
+        this.productosVendidos[nombreProducto] = (this.productosVendidos[nombreProducto] || 0) + cantidad;
+
+        console.log(`Venta realizada: ${cantidad} unidades de "${nombreProducto}" por $${totalVenta}.`);
+    }
+
+    generarReporte(inventario) {
+        console.log('Inventario actualizado:');
+        
+        for (const indice in inventario.productos) {
+            console.log(inventario.productos[indice]);
+        }
+    
+        console.log('\nVentas realizadas:');
+        for (const indice in this.ventas) {
+            const venta = this.ventas[indice];
+            console.log(`Producto: ${venta.nombreProducto}, Cantidad: ${venta.cantidad}, Total: $${venta.totalVenta}, Fecha: ${venta.fecha}`);
+        }
+    
+        console.log(`\nTotal de ingresos generados: $${this.ingresosTotales}`);
+    
+        let productoMasVendido = '';
+        let maxVentas = 0;
+        for (const nombreProducto in this.productosVendidos) {
+            if (this.productosVendidos[nombreProducto] > maxVentas) {
+                maxVentas = this.productosVendidos[nombreProducto];
+                productoMasVendido = nombreProducto;
+            }
+        }
+    
+        console.log(`Producto más vendido: ${productoMasVendido}`);
+    }
+    
 }
 
+const inventario = new Inventario();
+inventario.agregarProducto('Libro Romeo y Julieta', 20, 50, 'romance');
+inventario.agregarProducto('Libro Ush ush', 22, 30, 'romance');
+inventario.agregarProducto('Libro Pecados capitales', 24, 20, 'drama');
+inventario.agregarProducto('Libro It', 15, 40, 'miedo');
 
-//*****REPORTE ********/
-aplicarDescuento('romance',25);
+const ventas = new Venta();
+ventas.realizarVenta('Libro Romeo y Julieta', 2, inventario);
+ventas.realizarVenta('Libro It', 25, inventario);
+ventas.realizarVenta('Libro Rapunzel', 1, inventario);
 
-//ejempl de ventas realizadas
-realizarVenta('Libro Romeo y Julieta', 2);
-realizarVenta('Libro It', 2000);
-realizarVenta('Libro Rapunzel', 1); 
+inventario.aplicarDescuento('romance', 10);
 
-//inventario al final ya que aquí se va actualizando despues de todas 
-//las ventas realizadas
-console.log(inventarioProductos);
-
-
+ventas.generarReporte(inventario);
