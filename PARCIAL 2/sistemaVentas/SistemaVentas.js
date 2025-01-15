@@ -123,7 +123,7 @@ class Orden {
     mostrarOrden() {
         let productosOrden = '';
         for (const { producto, cantidad } of this._productos) {
-            productosOrden += `{${producto.toString()}, cantidad en la orden: ${cantidad}}`;
+            productosOrden += `\n{${producto.toString()}, cantidad en la orden: ${cantidad}}`;
         }
         console.log(`Orden: ${this._idOrden}, Total: $${this.calcularTotal()}, Impuesto: $${this.calcularImpuestos()}, Productos:${productosOrden}`);
     }
