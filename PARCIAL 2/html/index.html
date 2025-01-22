@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM EN JavaScript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1 id="cabecera" class="azul">Ejemplo del DOM con JavaScript</h1>
+        <p id="parrafo1" class="azul">Parrafo N1</p>
+        <p id="parrafo2" class="rojo">Parrafo N2</p>
+    </header>
+    <script>
+        /*get element by id*/
+        /*let cabecera = document.getElementById('cabecera');
+        console.dir(`Valor Cabecera: ${cabecera.innerHTML}`);
+        let parrafo=document.getElementsById('parrafo');
+        console.log(parrafo.innerHTML);
+
+        parrafo.innerHTML='Nuevo valor de parrafo';
+        console.log(parrafo.innerHTML);*/
+
+
+        //console.log('Saludos desde JS');
+
+        /*let parrafos=document.getElementsByTagName('p');
+        console.log(`Nro de Parrafos ${parrafos.length}`);
+
+        for(const element of parrafos){
+            console.log(element.innerHTML);
+        }*/
+      /* let parrafos=document.getElementsByClassName('azul');
+        console.log(`Nro de Elementos ${parrafos.length}`);
+
+        for(const element of parrafos){
+            console.log(element.innerHTML);
+        }*/
+       /*querySelector*/
+       let elementos=document.querySelectorAll('p.rojo');
+       console.log(`Nro de Elementos ${elementos.length}`);
+
+       for(const element of elementos){
+           console.log(element.innerHTML);
+       }
+
+    </script>
+</body>
+</html>

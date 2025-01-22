@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manejo del DOM en JavaScript</title>
+</head>
+<body>
+    <h1 id="Titulo">Manejor del DOM en JavaScript</h1>
+    <button type="button" onclick="mostrar()">Mostrar</button>
+    <br>
+    <img id="imagen" src="./imagenes/imagen1.jpg" alt="imagen" width="300">
+    <script>
+        let imagenes = [
+            './imagenes/imagen1.jpg',
+            './imagenes/imagen2.jpg',
+            './imagenes/imagen3.jpg',
+            './imagenes/imagen4.jpg'
+        ];
+
+        let indice = 0;
+        let intervalo = null;
+
+        function mostrar() {
+            document.getElementById('Titulo').innerHTML = 'Cambio de imágenes';
+            document.getElementById('Titulo').style.color = 'violet';
+
+            cambiarImagen();
+
+            if (!intervalo) {
+                intervalo = setInterval(cambiarImagen, 2000);
+            }
+        }
+
+        function cambiarImagen() {
+            const img = document.getElementById('imagen');
+            
+            img.src = imagenes[indice];
+            
+            indice = (indice + 1) % imagenes.length;
+        }
+    </script>    
+</body>
+</html>
