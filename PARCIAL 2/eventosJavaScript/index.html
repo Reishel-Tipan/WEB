@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Panel de Configuración Interactivo</title>
+</head>
+
+<body>
+    <h1 id="titulo">Eventos en JavaScript</h1>
+    <button id="mostrarPanel">Panel de Configuración</button>
+    <div id="panel" style="display: none;">
+        <form id="formularioConfiguracion">
+            <label>
+                Cambiar título de la página:
+                <input type="text" id="nuevoTitulo">
+            </label>
+            <br><br>
+            <label>
+                Cambiar Fondo:
+                <input type="color" id="entradaColor">
+            </label>
+            <br><br>
+            <label>
+                Habilitar Comentarios:
+                <input type="checkbox" id="habilitarComentarios">
+            </label>
+            <br><br>
+            <textarea id="comentarios" rows="4" cols="50" disabled></textarea>
+        </form>
+    </div>
+    <ul id="lista">
+        <li>Reishel Tipan 1</li>
+        <li>Reishel Tipan 2</li>
+        <li>Reishel Tipan 3</li>
+        <li>Reishel Tipan 4</li>
+
+    </ul>
+
+    <script>
+        const botonPanel = document.getElementById('mostrarPanel');
+        const panel = document.getElementById('panel');
+
+        botonPanel.addEventListener('click', () => {
+            panel.style.display = panel.style.display === 'none' ? 'block' : 'none';
+        });
+
+        const nuevoTitulo = document.getElementById('nuevoTitulo');
+        const titulo = document.getElementById('titulo');
+
+        nuevoTitulo.addEventListener('input', (evento) => {
+            titulo.textContent = evento.target.value;
+        });
+
+        const entradaColor = document.getElementById('entradaColor');
+
+        entradaColor.addEventListener('input', (evento) => {
+            document.body.style.backgroundColor = evento.target.value;
+        });
+
+        const habilitarComentarios = document.getElementById('habilitarComentarios');
+        const comentarios = document.getElementById('comentarios');
+
+        habilitarComentarios.addEventListener('change', (evento) => {
+            comentarios.disabled = !evento.target.checked;
+        });
+
+        const lista = document.getElementById('lista');
+
+        lista.addEventListener('click', (evento) => {
+            if (evento.target.tagName === 'LI') {
+                evento.target.remove();
+            }
+        });
+    </script>
+</body>
+
+</html>
